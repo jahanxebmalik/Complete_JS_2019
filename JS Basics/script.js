@@ -418,3 +418,74 @@ console.log(isDesigner);
 var isMarried = john.indexOf(true) === -1 ? 'John is NOT married' : 'John IS married';
 console.log(isMarried);
 */
+
+/***************************
+ * CODING CHALLENGE 3
+ */
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). He liked to tip 20% of the bill  when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+*/
+// MY SOLUTION
+/*
+var allTips = [];
+var finalAmount = [];
+
+function tipCalculator(billAmount) {
+    if (billAmount < 50) {
+        var billSmall = billAmount * .2;
+        console.log(billSmall);
+        allTips.push(billSmall);
+        finalAmount.push(billSmall + billAmount);
+    } else if (billAmount >= 50 && billAmount < 200) {
+        var billMedium = billAmount * .15;
+        console.log(billMedium);
+        allTips.push(billMedium);
+        finalAmount.push(billMedium + billAmount);
+    } else {
+        var billLarge = billAmount * .1;
+        console.log(billLarge);
+        allTips.push(billLarge);
+        finalAmount.push(billLarge + billAmount);
+    }
+}
+
+tipCalculator(20);
+tipCalculator(80);
+tipCalculator(300);
+console.log(allTips);
+console.log(finalAmount);
+*/
+
+// JONAS SOLUTION
+
+function tipCalculator(bill) {
+    var percentage;
+    if (bill < 50) {
+        percentage = .2;
+    } else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+    } else {
+        percentage = .1;
+    }
+    return percentage * bill;
+}
+
+//console.log(tipCalculator(10));
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+    tipCalculator(bills[1]),
+    tipCalculator(bills[2])
+];
+var finalValues = [
+    [bills[0] + tips[0]],
+    [bills[1] + tips[1]],
+    [bills[2] + tips[2]]
+];
+
+console.log(tips, finalValues);

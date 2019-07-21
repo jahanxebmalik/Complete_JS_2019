@@ -325,7 +325,7 @@ if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore) {
 /*********************
  * Functions
  */
-
+/*
 function calculateAge(birthyear) {
     return 2019 - birthyear;
 }
@@ -346,6 +346,75 @@ function yearsUntilRetirement(years, firstName) {
     }
 }
 
-yearsUntilRetirement(1985, 'Jahanzeb');
-yearsUntilRetirement(1947, 'Mike');
-yearsUntilRetirement(1969, 'Will');
+yearsUntilRetirement(1985, 'Jahanzeb'); //Jahanzeb has 26 years until retirement!
+yearsUntilRetirement(1947, 'Mike'); //Mike has already retired!
+yearsUntilRetirement(1969, 'Will'); //Will has 10 years until retirement!
+*/
+
+/*********************
+ * Function Statements and Expressions
+ */
+/*
+//Function declaration:
+// function yourProfession(job, firstName) {}
+
+//Function expression:
+var yourProfession = function (job, firstName) {
+    switch (job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives an Uber';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(yourProfession('teacher', 'John'));
+console.log(yourProfession('driver', 'Kate'));
+console.log(yourProfession('designer', 'William'));
+console.log(yourProfession('developer', 'Ronaldo'));
+*/
+
+/*********************
+ * Arrays
+ */
+
+//Two ways to create an Array:
+/*
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+console.log(names.length);
+
+//Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+//Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+//.push - Add at the end of an array
+john.push('blue');
+//.unshift - Add at the start of an array
+john.unshift('Mr.');
+// .pop - Removes element from the end of an array
+john.pop();
+// .shift - Removes element from the start of an array
+john.shift();
+console.log(john);
+
+// indexOf - Let's you know the position of item in array or if the item exists in the array or not
+// -1 indicates that item is not in the array list
+console.log(john.indexOf(1990));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
+
+var isMarried = john.indexOf(true) === -1 ? 'John is NOT married' : 'John IS married';
+console.log(isMarried);
+*/

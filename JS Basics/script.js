@@ -192,7 +192,7 @@ if (age < 13) {
  * The Ternary Operator and Switch Statements
  * AND (&&), OR (||) & NOT (!)
  */
-
+/*
 var firstName = 'Jahanzeb';
 var age = 22;
 var ageLimit = 21;
@@ -203,6 +203,7 @@ age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + '
 var drink = age >= ageLimit ? 'beer' : 'juice';
 console.log(drink);
 //or
+*/
 
 /*
 if (age >= 18) {
@@ -264,3 +265,58 @@ switch (true) {
         alert(name + ', it is your retirement age');
 }
 */
+
+/***********************
+ * Truthy and Falsy values and equality operators
+ */
+
+/* FALSY VALUES: 
+1. undefined, 
+2. null, 
+3. 0, 
+4. '', 
+5. NaN
+*/
+
+/* TRUTHY VALUES:
+- NOT falsy values
+*/
+/*
+var height;
+
+height = 0;
+if (height || height === 0) {
+    console.log('Variable is defined');
+} else {
+    console.log('Variable has not been defined');
+}
+*/
+
+/***************************
+ * CODING CHALLENGE 2
+ */
+/*
+ John and Mike both play basketball in different teams. In the latest 3 Games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+
+ 1. Calculate the average score for each team
+ 2. Decide which team wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+ 3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+
+ 4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator tot ake the decision.
+ */
+
+var johnAvgScore = (89 + 120 + 103) / 3;
+var mikeAvgScore = (116 + 94 + 123) / 3;
+var maryAvgScore = (97 + 134 + 105) / 3;
+
+console.log('John: ' + johnAvgScore + ',', 'Mike: ' + mikeAvgScore + ' and Mary: ' + maryAvgScore);
+
+if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore) {
+    console.log('John wins with the Avg. Score of ' + johnAvgScore);
+} else if (mikeAvgScore > johnAvgScore && mikeAvgScore > maryAvgScore) {
+    console.log('Mike wins with the Avg. Score of ' + mikeAvgScore);
+} else if (maryAvgScore > mikeAvgScore && maryAvgScore > johnAvgScore) {
+    console.log('Mary wins with the Avg. Score of ' + maryAvgScore);
+} else {
+    console.log('It is a draw');
+}

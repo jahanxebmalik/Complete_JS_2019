@@ -173,6 +173,7 @@ if (bmiMark > bmiJohn) {
  * AND (&&), OR (||) & NOT (!)
  */
 
+/*
 var firstName = 'Jahanzeb';
 var age = 20;
 
@@ -185,3 +186,81 @@ if (age < 13) {
 } else {
     console.log(firstName + ' is a man');
 }
+*/
+
+/***********************
+ * The Ternary Operator and Switch Statements
+ * AND (&&), OR (||) & NOT (!)
+ */
+
+var firstName = 'Jahanzeb';
+var age = 22;
+var ageLimit = 21;
+
+//Ternary Operator
+age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+//or
+var drink = age >= ageLimit ? 'beer' : 'juice';
+console.log(drink);
+//or
+
+/*
+if (age >= 18) {
+    var drink = 'beer';
+} else {
+    var drink = 'juice';
+}
+console.log(drink);
+*/
+
+// Switch statement
+/*
+var job = 'instructor';
+switch (job) {
+    case 'teacher':
+    case 'instructor':
+        console.log(firstName + ' teaches kids how to code.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber in Lisbon.');
+        break;
+    case 'designer':
+        console.log(firstName + ' designs beautiful websites.');
+        break;
+    default:
+        console.log(firstName + ' does something else.');
+}
+
+age = 15;
+
+switch (true) {
+    case age < 13:
+        console.log(firstName + ' is a boy');
+        break;
+    case age >= 13 && age < 20:
+        console.log(firstName + ' is a teenager');
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man');
+        break;
+    default:
+        console.log(firstName + ' is a man');
+}
+
+var name = prompt('What is your name?');
+var age = prompt('How old are you?');
+
+switch (true) {
+    case age < 18:
+        alert(name + ', you are currently underage');
+        break;
+    case age >= 18 && age < 25:
+        alert(name + ', this is your prime age');
+        break;
+    case age >= 25 && age < 60:
+        alert(name + ', you are eligible to apply!');
+        break;
+    default:
+        alert(name + ', it is your retirement age');
+}
+*/

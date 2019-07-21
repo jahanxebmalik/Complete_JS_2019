@@ -304,7 +304,7 @@ if (height || height === 0) {
 
  4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator tot ake the decision.
  */
-
+/* SOLUTION:
 var johnAvgScore = (89 + 120 + 103) / 3;
 var mikeAvgScore = (116 + 94 + 123) / 3;
 var maryAvgScore = (97 + 134 + 105) / 3;
@@ -320,3 +320,32 @@ if (johnAvgScore > mikeAvgScore && johnAvgScore > maryAvgScore) {
 } else {
     console.log('It is a draw');
 }
+*/
+
+/*********************
+ * Functions
+ */
+
+function calculateAge(birthyear) {
+    return 2019 - birthyear;
+}
+
+var ageJohn = calculateAge(1985);
+var ageMike = calculateAge(1947);
+var ageWill = calculateAge(1969);
+console.log(ageJohn, ageMike, ageWill);
+
+
+function yearsUntilRetirement(years, firstName) {
+    var age = calculateAge(years);
+    var yearRemaining = 60 - age;
+    if (yearRemaining > 0) {
+        console.log(firstName + ' has ' + yearRemaining + ' years until retirement!');
+    } else {
+        console.log(firstName + ' has already retired!')
+    }
+}
+
+yearsUntilRetirement(1985, 'Jahanzeb');
+yearsUntilRetirement(1947, 'Mike');
+yearsUntilRetirement(1969, 'Will');

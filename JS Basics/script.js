@@ -455,15 +455,15 @@ function tipCalculator(billAmount) {
     }
 }
 
-tipCalculator(20);
-tipCalculator(80);
-tipCalculator(300);
+tipCalculator(124);
+tipCalculator(48);
+tipCalculator(268);
 console.log(allTips);
 console.log(finalAmount);
 */
 
 // JONAS SOLUTION
-
+/*
 function tipCalculator(bill) {
     var percentage;
     if (bill < 50) {
@@ -489,3 +489,94 @@ var finalValues = [
 ];
 
 console.log(tips, finalValues);
+*/
+
+/***************************
+ * Objects and properties
+ */
+
+//Two ways to create an Object:
+/*
+1) Object literal 
+var john = {
+    key1: value1,
+    key2: value2
+};
+2) new Object syntax
+ var jane = new Object();
+    jane.firstName = 'Jane',
+    jane.birthYear = 1949,
+    jane['lastName'] = 'Smith';
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+//console.log(john); //or
+//console.log(john.firstName); //or
+//console.log(john['lastName']);
+
+var x = "birthYear";
+console.log(john[x]);
+
+//Mutate data
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+
+var malik = new Object();
+
+malik.firstName = 'Jahanzeb',
+    malik.age = 34,
+    malik['isMarried'] = true,
+    malik.siblings = ['Taimur', 'Turab', 'Salman'];
+console.log(malik['isMarried']);
+*/
+
+/***************************
+ * Objects and methods
+ */
+/*
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1999,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+    calcAge: function () {
+        this.age = 2019 - this.birthYear;
+    }
+};
+
+//console.log(john.calcAge());
+//john.age = john.calcAge();
+
+john.calcAge();
+console.log(john);
+*/
+
+//Practice
+
+var malik = {
+    firstName: 'Jahanzeb',
+    lastName: 'malik',
+    birthYear: 1985,
+    isMarried: true,
+    hasChildren: true,
+    son: 'Taimur',
+    siblings: ['Taimur', 'Turab', 'Salman'],
+    wife: 'komal',
+    myAge: function () {
+        this.age = 2020 - this.birthYear;
+    }
+}
+
+malik.myAge();
+console.log(malik);

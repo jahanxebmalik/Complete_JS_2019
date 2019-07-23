@@ -765,8 +765,6 @@ var john = {
     }
 }
 
-
-
 var mark = {
     fullName: 'Mark Miller',
     bills: [77, 475, 110, 45],

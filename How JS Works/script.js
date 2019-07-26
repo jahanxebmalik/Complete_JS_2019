@@ -98,21 +98,22 @@ var john = {
     yearOfBirth: 1990,
     calculateAge: function () {
         console.log(this);
+        console.log(2019 - this.yearOfBirth);
+        /*
+        function innerFunction() {
+            console.log(this);
+        }
+        innerFunction();
+        */
     }
 }
 
 john.calculateAge();
 
-var a = 'hello';
-first();
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984
+};
 
-function first() {
-    var b = 'Hi';
-    second();
-
-    function second() {
-        var c = 'Hey';
-    }
-}
-
-console.log(a + b + c);
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();

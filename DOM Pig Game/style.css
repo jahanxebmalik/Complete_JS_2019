@@ -26,6 +26,24 @@ body {
     color: #555;
 }
 
+.final-score {
+    position: absolute;
+    left: 50%;
+    top: 520px;
+    transform: translateX(-50%);
+    padding: 10px;
+    text-transform: uppercase;
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Lato';
+    width: 160px;
+}
+
+.final-score:focus {
+    outline: none;
+}
+
 .wrapper {
     width: 1000px;
     position: absolute;

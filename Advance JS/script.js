@@ -7,15 +7,19 @@ var john = {
     job: 'teacher'
 };
 */
+
+/*
 var Person = function (name, yearOfBirth, job) {
     this.name = name;
     this.yearOfBirth = yearOfBirth;
     this.job = job;
-    /*
-    this.calculateAge = function () {
-        console.log(2019 - this.yearOfBirth);
-    }
     */
+/*
+this.calculateAge = function () {
+    console.log(2019 - this.yearOfBirth);
+}
+*/
+/*
 }
 
 //Method
@@ -37,3 +41,32 @@ mark.calculateAge();
 console.log(john.lastName);
 console.log(jane.lastName);
 console.log(mark.lastName);
+*/
+//FUNCTION CONSTRUCTOR
+var LiverpoolPlayers = function (firstName, lastName, age, position, country) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.position = position;
+    this.country = country;
+}
+
+//INSTANCES
+var bobby = new LiverpoolPlayers('Roberto', 'Firmino', 24, 'Center Forward', 'Brazil');
+var salah = new LiverpoolPlayers('Mohammad', 'Salah', 26, 'Right Wing', 'Egypt');
+var sadio = new LiverpoolPlayers('Sadio', 'Mane', 27, "Left Wing", 'Senegal');
+var gini = new LiverpoolPlayers('Georgino', "Wijnaldum", 29, 'Central Midfield', 'Netherland');
+
+//INHERITANCE
+//Adding method to prototype
+LiverpoolPlayers.prototype.retirementAge = function () {
+    console.log(35 - this.age);
+}
+
+//Adding Property to Prototype
+LiverpoolPlayers.prototype.team = 'Liverpool FC';
+
+bobby.retirementAge();
+salah.retirementAge();
+sadio.retirementAge();
+gini.retirementAge();

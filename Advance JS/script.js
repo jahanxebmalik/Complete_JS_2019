@@ -102,8 +102,7 @@ var jane = Object.create(personProto, {
 */
 
 //Primitives vs objects
-
-
+/*
 //Primitives
 var a = 23;
 var b = a;
@@ -136,8 +135,79 @@ function change(a, b) {
     a = 30;
     b.city = 'San Francisco';
 }
-
 change(age, obj);
-
 console.log(age);
 console.log(obj.city);
+
+//27
+// San Francisco
+*/
+
+//Passing functions as arguments
+
+// var years = [1985, 1986, 1988, 1989, 2018];
+
+// function arrayCalc(arr, fn) {
+//     var arrRes = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         arrRes.push(fn(arr[i]));
+//     }
+//     return arrRes;
+// }
+
+// function calculateAge(el) {
+//     return 2019 - el;
+// }
+
+// function isFullAge(el) {
+//     return el >= 18;
+// }
+
+// function maxHeartRate(el) {
+//     if (el >= 18 && el <= 81) {
+//         return Math.round(206.9 - (0.67 * el));
+//     } else {
+//         return -1
+//     }
+// }
+
+// var ages = arrayCalc(years, calculateAge);
+// var fullAges = arrayCalc(ages, isFullAge);
+// var heartRate = arrayCalc(ages, maxHeartRate);
+
+// console.log(ages);
+// console.log(fullAges);
+// console.log(heartRate);
+
+var years = [1985, 1947, 2016, 1965, 1999];
+
+function arrayCalc(arr, fn) {
+    var arrRes = [];
+    for (i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el) {
+    return 2019 - el;
+}
+
+function isFullAge(el) {
+    return el >= 18;
+}
+
+function maxHeartRate(el) {
+    if (el >= 18 && el <= 81) {
+        return Math.round(206.9 - (0.67 * el))
+    } else {
+        return 'Not Applicable';
+    }
+}
+
+var ages = arrayCalc(years, calculateAge);
+var aboveAge = arrayCalc(ages, isFullAge);
+var heartRate = arrayCalc(ages, maxHeartRate);
+console.log(ages);
+console.log(aboveAge);
+console.log(heartRate);

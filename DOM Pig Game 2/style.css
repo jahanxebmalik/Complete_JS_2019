@@ -74,3 +74,93 @@ body {
     top: -7px;
     right: 10px;
 }
+
+.player-current-box {
+    background-color: #EB4D4D;
+    width: 40%;
+    color: #fff;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+.dice {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+i {
+    display: inline-block;
+    color: #EB4D4D;
+    margin-right: 10px;
+    font-size: 32px;
+    vertical-align: top;
+    line-height: 1;
+    margin-top: -4px;
+    transition: all .3s;
+}
+
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 410px;
+}
+
+.btn-hold {
+    top: 480px;
+}
+
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}

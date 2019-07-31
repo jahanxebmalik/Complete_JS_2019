@@ -231,6 +231,9 @@ game();
 */
 
 //Closures
+/*
+An inner function has always access to the variables and parameters of its outer function, even after the outer function has returned
+*/
 
 function retirement(retirementAge) {
     var a = ' years left until retirement.';

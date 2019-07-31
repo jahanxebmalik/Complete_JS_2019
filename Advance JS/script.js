@@ -180,7 +180,7 @@ console.log(heartRate);
 */
 
 // Functions returning functions
-
+/*
 function interviewQuestion(job) {
     if (job === 'designer') {
         return function (name) {
@@ -203,3 +203,26 @@ teacherQuestion('John');
 designerQuestion('John');
 
 interviewQuestion('designer')('Ghous');
+*/
+// Immediately Invoked Function Expressions (IIFE)
+/*
+function game() {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+}
+
+game();
+*/
+
+//or
+//IIFE: Used for data privacy and can't be accessed from global scope
+
+(function () {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+})();
+
+(function (goodluck) {
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodluck);
+})(5);

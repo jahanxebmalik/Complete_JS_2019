@@ -204,6 +204,8 @@ designerQuestion('John');
 
 interviewQuestion('designer')('Ghous');
 */
+
+
 // Immediately Invoked Function Expressions (IIFE)
 /*
 function game() {
@@ -216,7 +218,7 @@ game();
 
 //or
 //IIFE: Used for data privacy and can't be accessed from global scope
-
+/*
 (function () {
     var score = Math.random() * 10;
     console.log(score >= 5);
@@ -226,3 +228,22 @@ game();
     var score = Math.random() * 10;
     console.log(score >= 5 - goodluck);
 })(5);
+*/
+
+//Closures
+
+function retirement(retirementAge) {
+    var a = ' years left until retirement.';
+    return function (yearOfBirth) {
+        var age = 2019 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+}
+
+var retirementUS = retirement(66);
+var retirementGermany = retirement(65);
+var retirementIceland = retirement(67);
+
+retirementUS(1990);
+retirementGermany(1990);
+retirementIceland(1990);

@@ -269,6 +269,7 @@ interviewQuestion('teacher')('John');
 */
 
 //Bind, Call and Apply Methods
+/*
 var john = {
     name: 'John',
     age: 26,
@@ -322,9 +323,10 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
+*/
 
 //Scope
-
+/*
 //Root Scope (window)
 var fun = 5;
 
@@ -350,3 +352,4 @@ console.log('window', fun);
 funFunction();
 funerFunction();
 funestFunction();
+*/

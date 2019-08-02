@@ -19,4 +19,35 @@ c) correct answer (I would use a number for this)
 6. Check if the answer is correct and print to the console whether the answer is correct or not (Hint: write another method for this).
 
 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
+
+q1. Is JavaScript the coolest programming language in the world?
+0: Yes
+1: No
+
+q2. What is the name of this course's teacher?
+0: John
+1: Michael
+2: Jonas
 */
+
+function Question(question, answers, correctAnswer) {
+    this.question = question;
+    this.answers = answers;
+    this.correctAnswer = correctAnswer;
+}
+
+var q1 = new Question('Is JavaScript the coolest programming language in the world?',
+    ['Yes', 'No'],
+    0);
+
+var q2 = new Question('What is the name of this course\'s teacher?',
+    ['John', 'Michael', 'Jonas'],
+    2);
+
+var q3 = new Question('What does best describe coding?',
+    ['Boring', 'Hard', 'Fun', 'Tedious'],
+    2);
+
+var questions = [q1, q2, q3];
+
+var n = Math.floor(Math.random() * questions.length);

@@ -322,3 +322,31 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
+
+//Scope
+
+//Root Scope (window)
+var fun = 5;
+
+function funFunction() {
+    //child scope
+    var fun = 'helloooo';
+    console.log(1, fun);
+};
+
+function funerFunction() {
+    //child scope
+    var fun = 'byeeeeee';
+    console.log(2, fun);
+};
+
+function funestFunction() {
+    //child scope
+    var fun = 'Blaaaaah';
+    console.log(3, fun);
+};
+
+console.log('window', fun);
+funFunction();
+funerFunction();
+funestFunction();

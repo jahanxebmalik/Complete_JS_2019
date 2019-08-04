@@ -377,24 +377,34 @@ c) correct answer (I would use a number for this)
 */
 //SOLUTION
 /*
-function Question(questions, answers, correct) {
-    this.questions = questions;
+Is JavaScript the coolest programming language in the world?
+
+
+What is the name of this course's teacher?
+John    Michael     Jonas
+
+What does best describe coding?
+Boring', 'Hard', 'Fun', 'Tedious
+*/
+
+Question = function (question, answers, correct) {
+    this.question = question;
     this.answers = answers;
     this.correct = correct;
 }
 
 Question.prototype.displayQuestion = function () {
-    console.log(this.questions);
+    console.log(this.question);
     for (i = 0; i < this.answers.length; i++) {
         console.log(i + ': ' + this.answers[i]);
     }
 }
 
-Question.prototype.correctAnswer = function (ans) {
+Question.prototype.displayAnswer = function (ans) {
     if (ans === this.correct) {
-        console.log('Correct Answer');
+        console.log('Correct answer');
     } else {
-        console.log('Wrong Answer, Please Try Again :)');
+        console.log('Incorrect answer, please try again :)');
     }
 }
 
@@ -402,8 +412,8 @@ var q1 = new Question('Is JavaScript the coolest programming language in the wor
     ['Yes', 'No'],
     0);
 
-var q2 = new Question('Whar is the name of this course\'s teacher?',
-    ['John', 'Mike', 'Jonas'],
+var q2 = new Question('What is the name of this course\'s teacher?',
+    ['John', 'Michael', 'Jonas'],
     2);
 
 var q3 = new Question('What does best describe coding?',
@@ -411,10 +421,9 @@ var q3 = new Question('What does best describe coding?',
     2);
 
 var questions = [q1, q2, q3];
-
 var n = Math.floor(Math.random() * questions.length);
+
 questions[n].displayQuestion();
 
-var answer = parseInt(prompt('Please enter your answere here:'));
-questions[n].correctAnswer(answer);
-*/
+var answer = parseInt(prompt('Please select a correct answer:'));
+questions[n].displayAnswer(answer);

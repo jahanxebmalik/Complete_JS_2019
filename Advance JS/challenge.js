@@ -22,7 +22,7 @@ c) correct answer (I would use a number for this)
 
 --- Expert Level ---
 
-8. After you display the result, display the next random question, so that the game never ends (Hint: write a function for this and cal it right after displaying the result)
+8. After you display the result, display the next random question, so that the game never ends (Hint: write a function for this and call it right after displaying the result)
 
 9. Be careful: after Task 8, the game literally never ends. So include the option to quit the game if the user writes 'exit' instead of the answer. In this case, DON'T call the function from task 8.
 

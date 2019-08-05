@@ -386,7 +386,7 @@ John    Michael     Jonas
 What does best describe coding?
 Boring', 'Hard', 'Fun', 'Tedious
 */
-
+/*
 Question = function (question, answers, correct) {
     this.question = question;
     this.answers = answers;
@@ -427,3 +427,4 @@ questions[n].displayQuestion();
 
 var answer = parseInt(prompt('Please select a correct answer:'));
 questions[n].displayAnswer(answer);
+*/

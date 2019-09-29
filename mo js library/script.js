@@ -1,5 +1,7 @@
 const redCirc = new mojs.Shape({
         //isShowStart: true,
+        left: 0,
+        top: 0,
         stroke: 'red',
         fill: 'none',
         radius: 15,
@@ -13,4 +15,44 @@ const redCirc = new mojs.Shape({
             easing: 'sin.in'
         },
         duration: 500
-    }).play();
+    });
+
+
+const sparks = new mojs.Burst({
+    top: 0,
+    left: 0,
+    radius: {
+        0: 50
+    },
+    angle: {
+        0: 90
+    },
+    count: 30,
+    children: {
+        shape: 'cross',
+        points: 15,
+        stroke: 'white',
+        fill: 'none',
+        duration: 300
+    }
+});
+
+
+
+////-----------------
+
+document.addEventListener('click', function (e) {
+    redCirc
+        .tune({
+            x: e.pageX,
+            y: e.pageY
+        })
+        .replay();
+
+    sparks
+        .tune({
+            x: e.pageX,
+            y: e.pageY
+        })
+        .replay();
+});

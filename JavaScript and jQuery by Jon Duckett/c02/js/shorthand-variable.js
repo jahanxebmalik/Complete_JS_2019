@@ -16,8 +16,10 @@ var total = price * quantity;
 */
 
 // Write the total into the element with id of cost
-var el = document.getElementById('cost'); // Gets the element with an id of cost
-el.textContent = '$' + total; // Replaces the content of this element
+//var el = document.getElementById('cost'); // Gets the element with an id of cost
+//el.textContent = '$' + total; // Replaces the content of this element
+
+document.getElementById('cost').textContent = '$' + total;
 
 /* 
 NOTE: textContent does not work in IE8 or earlier

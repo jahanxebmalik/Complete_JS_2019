@@ -18,3 +18,11 @@ el.innerHTML = colors[0];
 
 There was a typo in the first print run in the last line of this example, it has been corrected in this file.
 */
+
+// Array literal
+
+var colors = ['black', 'white', 'pink'];
+
+// Array Constructor
+
+var colors = new Array('black', 'white', 'pink');

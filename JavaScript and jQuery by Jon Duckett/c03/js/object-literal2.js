@@ -1,5 +1,4 @@
 // Set up the object
-
 let hotel = {
   name: 'Park',
   rooms: 120,
@@ -8,8 +7,6 @@ let hotel = {
     return this.rooms - this.booked; // Need "this" because inside function
   }
 }
-
-
 
 // Update the HTML
 let elName = document.getElementById('hotelName'); // Get element
